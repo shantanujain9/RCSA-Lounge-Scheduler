@@ -3,11 +3,11 @@ This repository contains a Python program designed to automate the generation of
 
 ### Features:
 
-    Automatically generates schedules based on member's preferences and availability.
-    Prioritizes members with higher preferences for specific time slots
-    Ensures a fair distribution of work hours among all members
-    Provides a user-friendly interface for inputting guard data and preferences
-    Outputs a finalized schedule in an easily accessible format (e.g., CSV)
+    -Automatically generates schedules based on member's preferences and availability.
+    -Prioritizes members with higher preferences for specific time slots
+    -Ensures a fair distribution of work hours among all members
+    -Provides a user-friendly interface for inputting member's data and preferences
+    -Outputs a finalized schedule in an easily accessible format (e.g., CSV)
 
 This program is a valuable tool for team leaders and managers seeking to optimize the scheduling process and improve overall efficiency. By automating the scheduling task, it reduces the time and effort required to create fair and effective lounge schedules.
 
