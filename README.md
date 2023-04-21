@@ -1,7 +1,7 @@
 # RCSA-Lounge-Scheduler
 This repository contains a Python program designed to automate the generation of lounge schedules for the E-board members of RCSA. The program takes into account each member's availability and preferences, and intelligently assigns them to time slots based on a priority system.
 
-###Features:
+##Features:
 
     Automatically generates schedules based on member's preferences and availability.
     Prioritizes members with higher preferences for specific time slots
