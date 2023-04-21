@@ -11,6 +11,6 @@ This repository contains a Python program designed to automate the generation of
 
 This program is a valuable tool for team leaders and managers seeking to optimize the scheduling process and improve overall efficiency. By automating the scheduling task, it reduces the time and effort required to create fair and effective lounge schedules.
 
-License: This project is licensed under the GNU Affero General Public License v3.0, which enforces the "copyleft" principle and requires that any modifications or derivative works based on this code must also be released under the same AGPL-3.0 license. In addition, if this code is used in a networked application, the source code must be made available to users interacting with the application over a network. 
+**License:** This project is licensed under the GNU Affero General Public License v3.0, which enforces the "copyleft" principle and requires that any modifications or derivative works based on this code must also be released under the same AGPL-3.0 license. In addition, if this code is used in a networked application, the source code must be made available to users interacting with the application over a network. 
 
 Please refer to the LICENSE file for the complete terms and conditions of the GNU Affero General Public License v3.0.
