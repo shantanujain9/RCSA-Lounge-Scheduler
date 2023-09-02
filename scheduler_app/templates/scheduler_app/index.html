@@ -1,0 +1,154 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Styling -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F7F9F9;
+        }
+        
+        h1, h4 {
+            color: #125E8A;
+        }
+        
+        button {
+            background-color: #326e92;
+            color: #c7d8db;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #125E8A;
+        }
+
+        /* The style for an excluded cell */
+        /* The style for an excluded cell */
+        /* The style for an excluded cell */
+        .excluded {
+            background-color: #E5A8A8;  /* Muted red */
+            cursor: pointer;
+        }
+        /* The hover style for an excluded cell */
+        .excluded:hover {
+            background-color: #E57D7D;  /* Blend of muted red and gray */
+            transition: background-color 0.3s;
+        }
+
+        /* The hover style for any cell */
+        td:hover {
+            background-color: #d3d3d3;
+            transition: background-color 0.3s;  /* This provides a smooth transition effect */
+        }
+        /* The hover style for an excluded cell */
+        #availabilityDisplay, #finalizedDisplay, #leftoversDisplay {
+            margin-top: 20px;
+        }
+        /*Styling for the tables*/
+        /* Color for headers */
+        thead th {
+            background-color: #125E8A;
+            color: #F7F9F9;  /* This is a light color for contrast */
+        }
+        /* Styling for table headers */
+        th {
+            background-color: #4b81a0;
+            color: #F7F9F9;  /* A light color for contrast against the deep blue background */
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #BED8D4; /* A border for some separation */
+        }
+
+        /* Alternating row colors for the body of the table */
+        tbody tr:nth-child(even) {
+            background-color: #DEE7E7;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #DEE7E7;
+        }
+        body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;  /* This ensures that the main content takes up all available space, pushing the footer to the bottom */
+    margin-top: 75px;
+}
+
+header {
+    background-color: #125E8A;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensure it's above all other content */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+    padding-bottom: 1;
+}
+
+header img {
+    color: rgb(61, 105, 175);
+    max-height: 50px;  /* Adjust this value based on the size you want for the logo */
+    width: auto;
+    margin-right: 7mm;
+    padding: auto;
+}
+    </style>
+    <script type="text/javascript"> var csrfToken = "{{ csrf_token }}";</script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Scheduler App</title>
+</head>
+<body>
+    <header class="text-right">
+        <img src="{% static 'images\logo.png' %}" alt="RCSA">
+    </header>
+    <div class="container">
+        <h1 class="mt-5 mb-4">RCSA Scheduler App</h1>
+        <div class="mt-4 mb-3">
+            <!-- Define the form -->
+            <form method="post" enctype="multipart/form-data">
+                <!-- Django requires this for security -->
+                {% csrf_token %}
+                
+                <label for="fileUpload">Upload Files:</label>
+                <input type="file" id="fileUpload" name="files" multiple accept=".xlsx">
+                <button id="uploadFilesButton" type="button">Scan Files</button>
+            </form>
+        </div>
+      
+        <div id="availabilityDisplay"></div>
+
+        <h4 class="mt-4 mb-3">Final Generated Schedule</h4>
+        <button id="generateSchedule" class="mb-3">Generate Schedule</button>
+        <div id="finalizedDisplay"></div>
+        <div id="leftoversDisplay"></div>
+    </div>
+    
+
+    <footer class="text-center mt-5">
+        <div class="container">
+            <p>&copy; 2023 <strong>Shantanu Jain</strong>. All rights reserved.</p>
+            <p>
+                <a href="mailto:sj919@rutgers.edu" class="btn btn-outline-secondary" >Contact Developer</a>
+                <a href="https://github.com/shantanujain9/RCSA-Lounge-Scheduler" target="_blank" class="btn btn-outline-secondary">GitHub Repo</a>
+            </p>
+        </div>
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
